@@ -14,7 +14,7 @@ startTime = startTime(indstart2,:);
 RFT = RFT(indRFT,:);
 
 % Get the matrix into a vector of times for each patient
-TimetoReady = cat(2, startTime(:,2), RFT(:,3) - startTime(:,3));
+TimetoReady = cat(2, startTime(:,2), wrkdydif(startTime(:,3),RFT(:,3),0));
 
 % Filter out any negative values and greater than 30 days
 TimetoReady = TimetoReady(TimetoReady(:,2)>0,:);

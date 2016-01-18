@@ -77,7 +77,7 @@ notify = {'CT Done', 'MD Done', 'Dose Done', 'Prescription Done', 'Physics Done'
 %% Time for Machine Learning! 
 %Lasso
 clear
-load('FinalXY.mat')
+load('FinalXYbusday.mat')
 
 [B, FitInfo] = lasso(X{1}, Y{1},'CV',10);
 lassoPlot(B, FitInfo,'PlotType','CV');
